@@ -29,7 +29,7 @@ GALLERY.insertAdjacentHTML('beforeend', createGallery(galleryItems));
 let gallery = new SimpleLightbox('.gallery a', {
         captionType: 'attr',
         captionsData: 'title',
-        captionPosition: 'top',
+        captionPosition: 'bottom',
         captionDelay: 250,
     });
 //#endregion #
