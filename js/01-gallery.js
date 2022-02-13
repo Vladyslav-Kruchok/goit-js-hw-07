@@ -10,7 +10,7 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
-//create gallery
+//#region Create gallery #
 const GALLERY = document.querySelector('.gallery');
 const createGallery = (galleryItems) => {
     const str = galleryItems
@@ -32,9 +32,9 @@ const createGallery = (galleryItems) => {
     return str;
 };
 GALLERY.insertAdjacentHTML('beforeend', createGallery(galleryItems));
+//#endregion #
 
-// modal wnd
-// e = event
+//#region e = event #
 const KEY = 'Escape';
 const onClick = (instance, e, key) => {
     if(e.code === key)
@@ -42,7 +42,9 @@ const onClick = (instance, e, key) => {
         instance.close();
     }
 };
+//#endregion #
 
+//#region Modal wnd #
 const modalWndCreate = (e) => {
     if (e.target.tagName === 'IMG')
     {
@@ -66,10 +68,11 @@ const modalWndCreate = (e) => {
         instance.show();
     };
 };
+//#endregion #
 
-//main 
+//#region Main #
 GALLERY.addEventListener('click', e => {
     e.preventDefault();
     modalWndCreate(e);
 });
-
+//#endregion #
